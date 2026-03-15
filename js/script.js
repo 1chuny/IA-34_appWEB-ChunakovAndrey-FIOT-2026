@@ -32,7 +32,6 @@ function init() {
         
         container.appendChild(card);
 
-        // Задержка появления каждой карточки (эффект каскада)
         setTimeout(() => {
             card.classList.add('visible');
         }, index * 100); 
