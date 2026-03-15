@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SkyTickets — Find Cheap Flight Tickets</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo">Sky<span>Tickets</span></div>
+
+		<nav class="nav-links">
+			<a href="index.html">Main</a>
+			<a href="about.html">About us</a>
+			<a href="#" class="placeholder">Directions</a>
+			<a href="#" class="placeholder">Offers</a>
+			<a href="#" class="placeholder">Help</a>
+		</nav>
+
+		<div class="auth-group">
+			<button class="btn-login">Log in</button>
+			<button class="btn-register">Register</button>
+		</div>
+	</header>
+
+	<section class="search-section">
+		<div class="search-container">
+			<div class="search-box">
+				<input type="text" placeholder="From?">
+				<input type="text" placeholder="To?">
+				<input type="date">
+				<button class="search-btn">Find Tickets</button>
+			</div>
+		</div>
+	</section>
+
+	<main class="main">
+		<h1>Popular Flights</h1>
+		<div id="flights-container" class="ticket-grid"></div>
+	</main>
+
+	<footer class="footer">
+		<p>&copy; 2026 Air Tickets Online</p>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
