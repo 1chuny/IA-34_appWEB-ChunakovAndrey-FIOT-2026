@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "from": "Warsaw",
+    "to": "Cambodia",
+    "price": "500 $",
+    "timestart": "14:00",
+    "timeend": "00:00",
+    "img": "assets/images/cambodia.jpg"
+  },
+  {
+    "id": 2,
+    "from": "Dubai",
+    "to": "Hong Kong",
+    "price": "350 $",
+    "timestart": "09:30",
+    "timeend": "16:30",
+    "img": "assets/images/hongkong.jpg"
+  },
+  {
+    "id": 1776847759177,
+    "from": "qqqq",
+    "to": "wwww",
+    "price": "200",
+    "timestart": "12:47",
+    "timeend": "14:49",
+    "img": "https://via.placeholder.com/320x170?text=Flight"
+  },
+  {
+    "id": 1776848031713,
+    "from": "qqqq",
+    "to": "wwww",
+    "price": "500$",
+    "timestart": "14:56",
+    "timeend": "12:56",
+    "img": "https://iso.500px.com/30-joyful-photos-that-celebrate-every-kind-of-love/"
+  }
+]
