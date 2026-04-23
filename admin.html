@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SkyTickets — Admin Dashboard</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+	<style>
+		.admin-container {
+			max-width: 1000px;
+			margin: 40px auto;
+			padding: 20px;
+			background: white;
+			border-radius: 15px;
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+		}
+
+		.admin-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+		}
+
+		.admin-table th,
+		.admin-table td {
+			border: 1px solid #ddd;
+			padding: 12px;
+			text-align: left;
+		}
+
+		.admin-table th {
+			background: #003580;
+			color: white;
+		}
+
+		.admin-table tr:hover {
+			background: #f9f9f9;
+		}
+
+		.btn-edit {
+			background: #feba02;
+			color: #003580;
+			border: none;
+			padding: 6px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		.btn-delete {
+			background: #c0392b;
+			color: white;
+			border: none;
+			padding: 6px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-weight: bold;
+			margin-left: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<div class="logo">Sky<span>Admin</span></div>
+		<nav class="nav-links">
+			<a href="index.html">← Back to Main Site</a>
+		</nav>
+	</header>
+
+	<main class="main">
+		<div class="admin-container">
+			<h1 style="color: #003580; text-align: center;">Flights Management (CRUD)</h1>
+
+			<div style="background: #f0f2f5; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+				<h3 style="margin-top: 0;">Add New Flight</h3>
+				<form id="admin-add-form" style="display: grid; gap: 10px; grid-template-columns: 1fr 1fr 1fr;">
+					<input type="text" id="add-from" placeholder="From (e.g. Kiev)" required>
+					<input type="text" id="add-to" placeholder="To (e.g. Paris)" required>
+					<input type="text" id="add-price" placeholder="Price (e.g. 400 $)" required>
+					<input type="time" id="add-start" required title="Departure">
+					<input type="time" id="add-end" required title="Arrival">
+					<input type="text" id="add-img" placeholder="Image URL">
+					<button type="submit" class="buy-btn" style="grid-column: 1/-1;">Add Flight</button>
+				</form>
+			</div>
+
+			<h3>Existing Flights</h3>
+			<table class="admin-table">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Route</th>
+						<th>Departure - Arrival</th>
+						<th>Price</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody id="admin-table-body">
+					<tr>
+						<td colspan="5" style="text-align: center;">Loading flights...</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</main>
+
+	<div class="modal-overlay" id="modal-edit">
+		<div class="modal-content">
+			<button class="modal-close" onclick="closeEditModal()">&times;</button>
+			<h2>Edit Flight</h2>
+			<form id="admin-edit-form" style="display: flex; flex-direction: column; gap: 10px;">
+				<input type="hidden" id="edit-id">
+				<input type="text" id="edit-from" placeholder="From" required>
+				<input type="text" id="edit-to" placeholder="To" required>
+				<input type="text" id="edit-price" placeholder="Price" required>
+				<input type="time" id="edit-start" required>
+				<input type="time" id="edit-end" required>
+				<input type="text" id="edit-img" placeholder="Image URL">
+				<button type="submit" class="buy-btn" style="margin-top: 10px;">Update Flight</button>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/admin.js"></script>
+</body>
+
+</html>

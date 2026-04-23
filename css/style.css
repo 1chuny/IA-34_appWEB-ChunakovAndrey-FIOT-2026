@@ -254,3 +254,75 @@ body {
 		width: 100%;
 	}
 }
+
+/* --- MODALS (ВСПЛЫВАЮЩИЕ ОКНА) --- */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	/* Скрыто по умолчанию */
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-overlay.active {
+	display: flex;
+	/* Показываем окно при добавлении класса */
+}
+
+.modal-content {
+	background: white;
+	padding: 30px;
+	border-radius: 15px;
+	width: 90%;
+	max-width: 400px;
+	position: relative;
+	animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.modal-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: none;
+	border: none;
+	font-size: 1.8rem;
+	cursor: pointer;
+	color: #666;
+}
+
+.modal-content h2 {
+	margin-top: 0;
+	color: #003580;
+	text-align: center;
+}
+
+.modal-content form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.modal-content input {
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 1rem;
+}
