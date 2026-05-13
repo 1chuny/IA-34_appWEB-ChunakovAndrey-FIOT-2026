@@ -3,7 +3,7 @@
     "id": 1,
     "from": "Warsaw",
     "to": "Cambodia",
-    "price": "500 $",
+    "price": "550 $",
     "timestart": "14:00",
     "timeend": "00:00",
     "img": "assets/images/cambodia.jpg"
@@ -24,7 +24,7 @@
     "price": "200",
     "timestart": "12:47",
     "timeend": "14:49",
-    "img": "https://via.placeholder.com/320x170?text=Flight"
+    "img": "assets/images/osaka.jpg"
   },
   {
     "id": 1776848031713,
