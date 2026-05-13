@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  # Наш бекенд на Node.js
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis # Чекаємо, поки запуститься база, перш ніж стартувати сервер
+
+  # База даних Redis
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
